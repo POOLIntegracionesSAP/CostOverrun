@@ -1,0 +1,83 @@
+@Metadata.layer: #CORE
+@EndUserText.label: 'Cost Overrun for Project'
+// Main Metadata Extension of the Cost Overrun application for Project
+
+// Order results by project, ascending direction
+@UI.presentationVariant: [{ 
+    sortOrder: [{ 
+        by: 'project',
+        direction: #ASC
+     }]
+ }]
+// Navigation page (by WBS) defined with the project value as title and the WBS value as description
+@UI.headerInfo:
+{ 
+    title:
+    {
+        type: #STANDARD, value: 'project'
+    },
+    description:
+    { 
+        value: 'WBS'
+    }
+}
+
+annotate view ZCDS_CO_PROJECT_MAIN
+    with
+{
+// Navigation page (UI facet) contains 4 details (for each WBS): Detail Info of Project, Summary of the Cost Overrun calculation, Journal Entries and Previous Postings
+// For each detail, is defined the type (as List Report), the position in the screen and the association that provides the detailed info
+    @UI.facet: [
+        {
+            id: 'ProjectInfo',
+            purpose: #STANDARD,
+            type: #LINEITEM_REFERENCE,
+            label: 'Project Detail',
+            position: 10,
+            targetElement: '_DetailProject'
+        },
+        {
+            id: 'CalculationSummary',
+            purpose: #STANDARD,
+            type: #LINEITEM_REFERENCE,
+            label: 'Calculation Summary',
+            position: 20,
+            targetElement: '_Calculation'
+        },        
+        {
+            id: 'JournalEntries',
+            purpose: #STANDARD,
+            type: #LINEITEM_REFERENCE,
+            label: 'Journal Entries',
+            position: 30,
+            targetElement: '_JournalEntries'
+        },
+        {
+            id: 'Postings',
+            purpose: #STANDARD,
+            type: #LINEITEM_REFERENCE,
+            label: 'Previous Postings',
+            position: 40,
+            targetElement: '_Posting'
+        }
+    ]
+// Company Code defined as a selectionable field
+    @UI.lineItem: [ { position : 10 } ]
+    @UI.selectionField: [ { position : 20 } ]
+    companycode;
+// Project defined as a selectionable field
+    @UI.lineItem: [ { position : 20 } ]
+    @UI.selectionField: [ { position : 30 } ]
+    project;
+    @UI.lineItem: [ { position : 30 } ]
+    WBS;
+    @UI.lineItem: [ { position : 40 } ]
+    forecast;
+    @UI.lineItem: [ { position : 50 } ]
+    previousposting;
+    @UI.lineItem: [ { position : 60 } ]
+    totalamount;
+    @UI.lineItem: [ { position : 70 } ]
+    posting;
+    
+}

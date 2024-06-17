@@ -1,0 +1,24 @@
+@Metadata.layer: #CORE
+@EndUserText.label: 'Sales Order Details'
+
+// Metadata Extension to show the relevant fields of the details for each SO Item
+annotate view ZCDS_CO_SO_DETAIL_SALESORDER
+    with 
+{
+
+    @UI.lineItem: [ { position : 10 } ]
+    salesorganization;
+    @UI.lineItem: [ { position : 20 } ]
+    salesorder;
+    @UI.lineItem: [ { position : 30 } ]
+    salesorderitem;
+    @UI.lineItem: [ { position : 40 } ]
+    overallstatus;
+    @UI.lineItem: [ { position : 50 } ]
+    deliveryblock;
+    @UI.lineItem: [ { position : 60 } ]
+    lastchangedate;
+    @UI.lineItem: [ { position : 70 } ]
+    WBS;
+    
+}

@@ -1,0 +1,27 @@
+@Metadata.layer: #CORE
+@EndUserText.label: 'Journal Entries'
+
+// Metadata Extension to show the relevant fields of the journal entries created in the system for each SO Item
+annotate view ZCDS_CO_SO_DETAIL_JENTRY
+    with 
+{
+    @UI.lineItem: [ { position : 10 } ]
+    companycode;
+    @UI.lineItem: [ { position : 20 } ]
+    planningcategory;
+    @UI.lineItem: [ { position : 30 } ]
+    profitcenter;
+    @UI.lineItem: [ { position : 40 } ]
+    ledger;
+    @UI.lineItem: [ { position : 50 } ]
+    fiscalyear;
+    @UI.lineItem: [ { position : 60 } ]
+    fiscalperiod;
+    @UI.lineItem: [ { position : 70 } ]
+    glaccountjournal;
+    @UI.lineItem: [ { position : 80 } ]
+    actualamount;
+    @UI.lineItem: [ { position : 90 } ]
+    planamount;
+    
+}

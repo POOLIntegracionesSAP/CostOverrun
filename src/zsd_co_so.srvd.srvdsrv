@@ -1,0 +1,11 @@
+@EndUserText.label: 'Cost Overrun for SO'
+@AbapCatalog.extensibility.extensible: true
+define service ZSD_CO_SO {
+  expose ZCDS_CO_SO_MAIN              as CostOverrun;
+  expose ZCDS_CO_SO_FILTER_SO         as FilterSO;
+  expose ZCDS_CO_SO_DETAIL_SALESORDER as DetailSO;
+  expose ZCDS_CO_SO_DETAIL_JENTRY     as JournalEntries;
+  expose ZCDS_CO_SO_DETAIL_POSTING    as Postings;
+  expose ZCDS_CO_SO_SUMMARY_CALC      as Calculation;
+  expose I_SalesOrganization          as SalesOrganization;
+}

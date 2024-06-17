@@ -1,0 +1,26 @@
+@Metadata.layer: #CORE
+@EndUserText.label: 'Journal Entries'
+
+// Metadata Extension to show the relevant fields of the journal entries created in the system for each WBS Element
+annotate view ZCDS_CO_PROJECT_DETAIL_JENTRY
+    with 
+{
+
+    @UI.lineItem: [ { position : 10 } ]
+    companycode;
+    @UI.lineItem: [ { position : 20 } ]
+    planningcategory;
+    @UI.lineItem: [ { position : 30 } ]
+    ledger;
+    @UI.lineItem: [ { position : 40 } ]
+    fiscalyear;
+    @UI.lineItem: [ { position : 50 } ]
+    fiscalperiod;
+    @UI.lineItem: [ { position : 60 } ]
+    glaccountjournal;
+    @UI.lineItem: [ { position : 70 } ]
+    actualamount;
+    @UI.lineItem: [ { position : 80 } ]
+    planamount;
+    
+}

@@ -1,0 +1,28 @@
+@Metadata.layer: #CORE
+@EndUserText.label: 'Summary Calculation'
+
+// Metadata Extension to show the relevant fields of the Cost Overrun calculation for each SO Item
+annotate view ZCDS_CO_SO_SUMMARY_CALC
+    with 
+{
+    @UI.lineItem: [ { position : 10 } ]
+    companycode;
+    @UI.lineItem: [ { position : 20 } ]
+    salesdoc;
+    @UI.lineItem: [ { position : 30 } ]
+    salesdocitem;
+    @UI.lineItem: [ { position : 40 } ]
+    typeclass;
+    @UI.lineItem: [ { position : 50 } ]
+    actualamount_sum;
+    @UI.lineItem: [ { position : 60 } ]
+    planamount_sum;
+    @UI.lineItem: [ { position : 70 } ]
+    forecast_etc;
+    @UI.lineItem: [ { position : 80 } ]
+    forecast_eac;
+    @UI.lineItem: [ { position : 80 } ]
+    amountposting;
+    @UI.lineItem: [ { position : 90 } ]
+    totalamount;
+}

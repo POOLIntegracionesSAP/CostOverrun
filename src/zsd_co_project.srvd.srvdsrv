@@ -1,0 +1,11 @@
+@EndUserText.label: 'Cost Overrun for Project'
+@AbapCatalog.extensibility.extensible: true
+define service ZSD_CO_PROJECT {
+  expose ZCDS_CO_PROJECT_MAIN           as CostOverrun;
+  expose ZCDS_CO_PROJECT_FILTER_PROJECT as FilterProject;
+  expose ZCDS_CO_PROJECT_DETAIL_PROJECT as DetailProject;
+  expose ZCDS_CO_PROJECT_DETAIL_JENTRY  as JournalEntries;
+  expose ZCDS_CO_PROJECT_DETAIL_POSTING as Posting;
+  expose ZCDS_CO_PROJECT_SUMMARY_CALC   as Calculation;
+  expose I_CompanyCode                  as CompanyCode;
+}

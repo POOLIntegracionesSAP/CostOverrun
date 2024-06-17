@@ -1,0 +1,26 @@
+@Metadata.layer: #CORE
+@EndUserText.label: 'Project Details'
+
+// Metadata Extension to show the relevant fields of the details for each WBS Element
+annotate view ZCDS_CO_PROJECT_DETAIL_PROJECT
+    with 
+{
+
+    @UI.lineItem: [ { position : 10 } ]
+    companycode;
+    @UI.lineItem: [ { position : 20 } ]
+    project;
+    @UI.lineItem: [ { position : 30 } ]
+    projectdescription;
+    @UI.lineItem: [ { position : 40 } ]
+    WBS;
+    @UI.lineItem: [ { position : 50 } ]
+    WBSdescription;
+    @UI.lineItem: [ { position : 60 } ]
+    processingstatus;
+    @UI.lineItem: [ { position : 70 } ]
+    projectprofile;
+    @UI.lineItem: [ { position : 80 } ]
+    projectlastchangeddate;
+    
+}

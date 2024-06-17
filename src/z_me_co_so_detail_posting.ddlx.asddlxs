@@ -1,0 +1,14 @@
+@Metadata.layer: #CORE
+@EndUserText.label: 'Previous Postings'
+
+// Metadata Extension to show the relevant fields of the postings created in the system for each SO Item
+annotate view ZCDS_CO_SO_DETAIL_POSTING
+    with 
+{
+    @UI.lineItem: [ { position : 10 } ]
+    glaccountposting;
+    @UI.lineItem: [ { position : 20 } ]
+    amountposting;
+    @UI.lineItem: [ { position : 30 } ]
+    documentdateposting;
+}
